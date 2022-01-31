@@ -1,0 +1,118 @@
+* {  /*reset*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+/* -----HEADER------*/
+
+header, main {
+    width: 100vw;
+    height: auto;
+}
+
+h1, nav { /*separando metade do cabeçalho para navegação e título*/
+    width: 50%;
+    height: 40px;
+    background-color: black;
+}
+
+h1 {  /*título principal/logo*/
+    color: white;
+    font-family: helvetica;
+    padding: 15px;
+    font-size: 1.3em;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10vw;
+}
+
+nav a.headbutton {  /*botões do menu de navegação*/
+    width: 8vw;
+    height: 3.5vh;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+}
+
+nav a.non-active-button:hover {  /*ação do mouse em botões que não sejam o ativo (home)*/
+    background-color: red;
+    transition: 0.3s;
+}
+
+nav a#home-div {  /*botão home que já "está ativo"*/
+    background-color: #F9A825; 
+    border-radius: 75px;
+}
+
+nav#top-nav { /*organização do menu de navegação*/
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: helvetica;
+}
+
+/* -----MAIN------*/
+
+section#main-section { /*contêiner para <article> e <form>*/
+    margin: 20vh auto;
+    width: 42vw;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #212121;
+    
+}
+
+section#main-section p {  /*parte textual*/
+    width: 20vw;
+    height: 30vh;
+    border-right: 1px dotted #212121;
+    align-items: center;
+    justify-content: center;
+    font-family: helvetica;
+}
+
+section#main-section form {  /*parte do formulário*/
+    width: 20vw;
+    height: 30vh;
+    border-left: 1px dotted #212121;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: helvetica;
+}
+
+section#main-section form label {  /*título do formulário*/
+    font-weight: bold;
+    font-size: 1.5em;
+    
+}
+
+section#main-section form input#email {  /*campo de entrada de email*/
+    width: 15vw;
+    height: 4vh;
+    margin: 1vw; /* separar em coluna do input submit */
+}
+
+/* -----FOOTER------*/
+
+footer {
+    width: 100vw;
+    height: 14.3vh; /*80px não funcionava*/
+    background-color: #212121;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-family: helvetica;
+    color: white;
+}
